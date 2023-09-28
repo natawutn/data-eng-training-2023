@@ -1,0 +1,9 @@
+# Get the ubuntu image from Docker Hub
+FROM python:slim
+# Copy current folder which contains python code
+# into directory /usr/src/hello of the Docker image
+COPY . /usr/src/hello
+# Specify working directory
+WORKDIR /usr/src/hello
+# Run program
+CMD ["python", "hello.py"]
